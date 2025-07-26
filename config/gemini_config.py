@@ -3,7 +3,7 @@ import json
 import google.generativeai as genai
 
 # Load Gemini API key and model from JSON config
-config_path = os.path.join(os.path.dirname(__file__), 'gemini_model_config.json')
+config_path = os.path.join(os.path.dirname(__file__), 'your-api-key-file.json')
 
 if not os.path.exists(config_path):
     raise FileNotFoundError(f"Gemini model config file not found at {config_path}")
