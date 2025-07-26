@@ -11,7 +11,7 @@ from PIL import Image
 import tempfile
 
 # ✅ Set up the path to your Vision API JSON key (inside modules folder)
-os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "modules/vision-key.json"
+os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "modules/your-vision-key.json"
 
 # ✅ Initialize the Vision API client
 client = vision.ImageAnnotatorClient()
