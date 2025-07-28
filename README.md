@@ -61,18 +61,27 @@ Copy
 Edit
 📦 NoteBotAI/
 ├── app.py                      # Main Streamlit app
+
 ├── modules/
-│   ├── ocr_extractor.py       # OCR using Google Vision API
+│   ├── ocr_extractor.py  # OCR using Google Vision API
+
 │   ├── note_corrector.py      # Grammar correction with Gemini
+
 │   ├── summarizer.py          # Summarization using Gemini
+
 │   ├── audio_generator.py     # Text-to-speech
+
 │   ├── chatbot.py             # NoteBot chat logic
+
 │   └── exam_question_predictor.py # AI-generated questions
+
 ├── utils/
 │   └── pdf_exporter.py        # PDF generation utilities
+
 ├── data/
 │   └── DejaVuSans.ttf         # Font file for PDF export
 └── requirements.txt
+
 🧠 How It Works
 Upload File: Upload scanned handwritten/typed notes as image or PDF
 
