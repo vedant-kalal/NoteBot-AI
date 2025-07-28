@@ -1,99 +1,121 @@
-📚 NoteBot AI
-NoteBot AI is a powerful AI-powered web application that lets you:
+🧠 NoteBot AI – Intelligent Note Evaluator, Summarizer & Chatbot
+🏆 Hackathon Winning Project – RotaHack 2025 (New LJ College)
+A complete AI-powered platform for scanning handwritten notes, summarizing them, generating audio, predicting exam questions, and interacting via chatbot.
 
-Upload handwritten or printed notes (PDF/PNG/JPG)
+📌 Project Overview
+NoteBot AI is an educational assistant web app that transforms scanned handwritten or printed notes into structured, summarized, and interactable content using AI. It enables students and teachers to:
 
-Extract and correct the text using Google Vision OCR
+Extract handwritten content using OCR 
 
-Summarize notes cleanly
+Automatically correct grammar without altering meaning
 
-Chat with your notes using a context-aware chatbot
+Summarize lengthy notes
 
-Download clean summary PDFs and audio summaries
+Convert summaries to speech
 
-Export your chat history to PDF
+Predict exam questions based on your notes
 
-✨ All powered by Google Gemini Pro (2.5) and Google Cloud Vision AI
+Chat with a smart bot trained only on your uploaded content
 
-🚀 Features
-✅ 1. File Upload (PDF/PNG/JPG)
-Upload scanned handwritten or printed notes
+Download summaries and chats as PDFs/audio
 
-Supports PDFs and common image formats
-
-Extracted using Google Cloud Vision OCR
-
-✅ 2. OCR Text Correction
-Automatically corrects OCR errors
-
-Improves sentence structure and readability
-
-✅ 3. Smart Summarization
-Extracts important topics and structures
-
-Organizes content using headers and key points
-
-✅ 4. Audio Summary 🔊
-Converts the cleaned summary to audio using free high-quality TTS
-
-Supports math expressions and avoids reading markdown symbols like #, **, etc.
-
-Downloadable MP3 format
-
-✅ 5. Ask NoteBot 💬
-Ask questions directly from your notes
-
-NoteBot answers only within the uploaded content
-
-Strictly avoids hallucinating out-of-scope answers
-
-All chats are downloadable in a clean PDF format
+🚀 Live Features
+✅ Upload PDF/PNG/JPG scanned notes
+✅ Handwriting OCR via Google Vision API
+✅ Grammatical Correction using Gemini AI
+✅ Summarization into clear, formatted text
+✅ Audio Summary using gTTS
+✅ Exam Question Prediction from uploaded notes
+✅ NoteBot Chat (Context-locked chatbot – no hallucinations)
+✅ Download PDF & MP3 of outputs
+✅ Buffering & UI feedback for long operations
 
 🛠️ Tech Stack
-Tool	Usage
-Streamlit	Frontend Web UI
-Google Vision API	OCR from scanned PDFs/images
-Google Gemini Pro (2.5)	Summarization, Chatbot, Corrections
-gTTS / pyttsx3 (configurable)	Text-to-Speech summary
-fpdf	Generating downloadable PDFs
+Frontend:
+
+Streamlit (Python Web App UI)
+
+HTML + Streamlit components
+
+Backend / AI Services:
+
+Google Vision API – for OCR
+
+Gemini 1.5 Pro – for grammar, summarization, Q&A, exam prediction
+
+Python
+
+PDF & Audio Processing:
+
+FPDF, ReportLab – for PDF generation
+
+gTTS – for text-to-speech
+
+PIL, PyPDF2 – for image/PDF handling
+
+regex – for text cleaning
 
 📁 Project Structure
-
-The NoteBot/
-├── app.py
-├── config/
-│   └── gemini_config.py
+bash
+Copy
+Edit
+📦 NoteBotAI/
+├── app.py                      # Main Streamlit app
 ├── modules/
-│   ├── ocr_extractor.py
-│   ├── note_corrector.py
-│   ├── summarizer.py
-│   ├── chatbot.py
-│   └── audio_generator.py
+│   ├── ocr_extractor.py       # OCR using Google Vision API
+│   ├── note_corrector.py      # Grammar correction with Gemini
+│   ├── summarizer.py          # Summarization using Gemini
+│   ├── audio_generator.py     # Text-to-speech
+│   ├── chatbot.py             # NoteBot chat logic
+│   └── exam_question_predictor.py # AI-generated questions
 ├── utils/
-│   └── pdf_exporter.py
-├── modules/
-│   └── vision-key.json  # 🔑 Google Vision API key
-├── README.md
-└── requirements.txt 
+│   └── pdf_exporter.py        # PDF generation utilities
+├── data/
+│   └── DejaVuSans.ttf         # Font file for PDF export
+└── requirements.txt
+🧠 How It Works
+Upload File: Upload scanned handwritten/typed notes as image or PDF
 
+OCR + Correction: Extract text using Google Vision, then correct it with Gemini
 
-🧠 How it Works
-Upload scanned notes
+Summarize: Generate AI summary and download as PDF
 
-OCR using Google Vision → Cleaned with Gemini
+Generate Audio: Convert summary to audio (MP3) with gTTS
 
-Choose to:
+Predict Questions: AI predicts possible exam questions from the summary
 
-🔎 Summarize + Download PDF/MP3
+Chat with Notes: Ask anything from uploaded content using NoteBot
 
-🤖 Ask questions (AI chatbot trained only on your content)
+Export Everything: Get summaries and chats in downloadable formats
 
-Export chats or summaries anytime
+🔒 Why It’s Better Than General Tools
+🔐 No hallucinations – Chat only uses your uploaded content
 
-📝 To-Do / Coming Soon
- Add MCQ Quiz Generator (temporarily removed)
+✍️ Handwriting support – far better OCR + grammar integration than ChatGPT
 
- Real-time drawing board for handwritten notes
+📚 Exam-focused – auto predicts questions from actual content
 
- AI-powered diagram explanation
+🧑‍🏫 Teacher & Student Friendly – fair, fast, and transparent evaluation
+
+💾 Offline friendly – all generated data is downloadable
+
+🏆 Achievement
+🥇 1st Prize – RotaHack 2025 Hackathon
+Organized by the Rotaract Club of New LJ College – recognized for innovation, utility, and real-world applicability in education technology.
+
+📦 Installation Guide
+bash
+Copy
+Edit
+git clone https://github.com/vedant-kalal/notebot-ai.git
+cd notebot-ai
+pip install -r requirements.txt
+streamlit run app.py
+⚠️ Prerequisites
+Google Cloud Vision API Key (store as JSON and set via environment or code)
+Gemini API Access (gemini-1.5-pro)
+
+🧪 Demo
+👉 [https://video-link-generator.replit.app/v/k9fb6vcmprlb8up9h8blyv]
+🧑‍💻 Or deploy via platforms like Streamlit Cloud or Render
 
